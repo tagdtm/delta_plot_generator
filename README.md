@@ -45,12 +45,16 @@ This kind of RGB distribution makes easy to optimise the code.
 </div>
 
 ## example
+The dataset given in the repository shows fig.2 and fig.3 as input and output fig.4.
+Users can use colormap whatever he/she wants, including the colormap used in input picture.
+However, in this case, the "seismic" is chosen since I want 0 to be white.
+
 <div align="center">
       
-| <img src="image/baseline.jpg" width="600"> | 
+| <img src="image/baseline.png" width="600"> | 
 |:--:| 
 |<b> Fig.2 - baseline </b> |
-| <img src="image/comparison.jpg" width="600"> | 
+| <img src="image/comparison.png" width="600"> | 
 |:--:| 
 |<b> Fig.3 - comparison </b> |
 | <img src="image/test.jpg" width="600"> | 
