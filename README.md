@@ -55,10 +55,8 @@ However, in this case, the "seismic" is chosen since I want 0 to be white.
 |:--:| 
 |<b> Fig.2 - baseline </b> |
 | <img src="image/comparison.png" width="600"> | 
-|:--:| 
 |<b> Fig.3 - comparison </b> |
 | <img src="image/test.jpg" width="600"> | 
-|:--:| 
 |<b> Fig.4 - Output </b> |
       
 </div>
