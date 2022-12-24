@@ -18,10 +18,6 @@ Before run main.py, install the cython with following command.
       python setup.py build_ext -i
 
 ## Usage
-See the main.py.
-The argument example is included in the code.
-
-## Example
 The all the file required is given in the folder, including the 2 different surface plot picture.
 The colormap is extracted from STARCCM+ "blue-yellow-red", and the data is sorted in CSV.
 The different colormap shows the different RGB distribution, so that if the picture the user focusing on uses the different colormap, you have to generate another csv file, on the same format. The csv file format is given as shown in below. In this case, datasize should be 101, since it includes 101 data series. The more data, the more accurate, but takes a bit longer.
@@ -46,4 +42,19 @@ This kind of RGB distribution makes easy to optimise the code.
 |:--:| 
 |<b> Fig.1 - RGB distribution </b> |
 
+</div>
+
+## example
+<div align="center">
+      
+| <img src="image/baseline.jpg" width="600"> | 
+|:--:| 
+|<b> Fig.2 - baseline </b> |
+| <img src="image/comparison.jpg" width="600"> | 
+|:--:| 
+|<b> Fig.3 - comparison </b> |
+| <img src="image/test.jpg" width="600"> | 
+|:--:| 
+|<b> Fig.4 - Output </b> |
+      
 </div>
