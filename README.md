@@ -34,4 +34,5 @@ The different colormap shows the different RGB distribution, so that if the pict
 |100|...|...|...|
 
 This kind of RGB distribution makes easy to optimise the code.
-<img src="image/RGB_distribution.jpg" alt="drawing" width="200"/>
+
+<img src="image/RBG_distribution.jpg" alt="drawing" width="200"/>
