@@ -26,6 +26,8 @@ The all the file required is given in the folder, including the 2 different surf
 The colormap is extracted from STARCCM+ "blue-yellow-red", and the data is sorted in CSV.
 The different colormap shows the different RGB distribution, so that if the picture the user focusing on uses the different colormap, you have to generate another csv file, on the same format. The csv file format is given as shown in below. In this case, datasize should be 101, since it includes 101 data series. The more data, the more accurate, but takes a bit longer.
 
+<div align="center">
+
 |Data|R:0-255|G:0-255|B:0-255|
 |----|--------|-------|-------|
 |0  |128|12|78|
@@ -33,6 +35,15 @@ The different colormap shows the different RGB distribution, so that if the pict
 |...|...|...|...|
 |100|...|...|...|
 
+</div>
+
+Fig 1 shows the STARCCM+ colormap RGB distribution.
 This kind of RGB distribution makes easy to optimise the code.
 
-<img src="image/RBG_distribution.jpg" alt="drawing" width="200"/>
+<div align="center">
+
+| <img src="image/RBG_distribution.png" width="600"> | 
+|:--:| 
+|<b> Fig.1 - RGB distribution </b> |
+
+</div>
