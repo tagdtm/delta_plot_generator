@@ -14,7 +14,7 @@ if __name__ == "__main__":
     datasize = 101
     data_r, R_reference, G_reference, B_reference = dplot.color_reference(colormap, datasize)
     data, data2 = get_data_c.get_data_cython(R1,R2,G1,G2,R_reference,G_reference,data_r,height,width)
-    data_delta = dplot.data_delta(4,data,data2,height,width)
+    data_delta = dplot.data_delta(25,data,data2,height,width)
 
     figname = "test.jpg"
     dplot.fig_plot(data_delta, figname, height, width)
