@@ -1,26 +1,26 @@
 # Delta plot generator
 
 ## General
-This code was developed to get the delta plot mainly for CFD surface plot picture.
+This code was developed to get the delta plot mainly for the CFD surface plot picture.
 
 ## packages dependency
-This code uses following package.
-- numpy
+This code uses the following package.
+- NumPy
 - matplotlib
-- csv
+- CSV
 - cython 0.29
 
 ## Cython Install
-Cython is used to accelarate coding.
-Before run main.py, install the cython with following command.
+Cython is used to accelerate coding.
+Before running main.py, install the Cython with the following command.
 
 
       python setup.py build_ext -i
 
 ## Prerequest
 All the file required is given in the folder, including the 2 different surface plot picture.
-The colormap is extracted from STARCCM+ "blue-yellow-red", and the data is sorted in CSV.
-The different colormap shows the different RGB distribution, so that if the picture the user focusing on uses the different colormap, you have to generate another csv file, on the same format. The csv file format is given as shown in below. In this case, datasize should be 101, since it includes 101 data series. The more data, the more accurate, but takes a bit longer.
+The color map is extracted from STARCCM+ "blue-yellow-red", and the data is sorted in CSV.
+The different colormap shows the different RGB distribution, so if the picture the user focuses on uses a different colormap, you have to generate another CSV file in the same format. The CSV file format is given as shown below. In this case, the data size should be 101, since it includes 101 data series. The more data, the more accurate, but takes a bit longer.
 
 <div align="center">
 
@@ -46,22 +46,22 @@ This kind of RGB distribution makes easy to optimise the code.
 
 ## Attention and Tips
 ### Specify margin for searching area
-This code depends on the specified colormap. So if you want to use another types of colormap, you have to get RGB data for the colormap.
-As long as you get the colormap data and put the info in csv format shown above, the program recognises it.
-Since the RGB data for each pixcel is given for the input picture, the program searches the corresponding RGB combination in given colormap. However, sometimes, the RGB data is not exactly corresponding to the colormap. In this case, at such points, the returned scalor value does not updated from the initialised value.
-The solution is given as allowing some buffer for the searching area, which user can specify. As the buffer gets larger, the accuracy gets worse, so some optimisation is required to run the code accurately with new colormap configuration.
-Another solution is providing colormap data with enough resolution. This allows to find the exact maching value more likely, but still this could have the same issue.
-**So I strongly recommend using buffer to get the scalor field.** 
+This code depends on the specified colormap. So if you want to use another type of colormap, you have to get RGB data for the colormap.
+As long as you get the colormap data and put the info in the CSV format shown above, the program recognises it.
+Since the RGB data for each pixel is given for the input picture, the program searches the corresponding RGB combination in the given color map. However, sometimes, the RGB data is not exactly corresponding to the color map. In this case, at such points, the returned scalar value does not update from the initialised value.
+The solution is given as allowing some buffer for the searching area, which the user can specify. As the buffer gets larger, the accuracy gets worse, so some optimisation is required to run the code accurately with the new colormap configuration.
+Another solution is providing colormap data with enough resolution. This allows us to find the exact matching value more likely, but still, this could have the same issue.
+**So I strongly recommend using a buffer to get the scalar field.** 
 ### Initialise value
 Another technique is to have initialised value enough higher or lower to clarify the value is whether recognised at searching sequence or not.
-For example, if you set colormap scalor value 0 to 100, like 200 seems enough to judge the value.
+For example, if you set the colormap scalar value from 0 to 100, 200 seems enough to judge the value.
 The program displays the number of pixels in the entire specified area and the number of pixels for which a scalar value was found.
 
-I'll write further more later.
+I'll write furthermore later.
 
 ## Result
-The dataset given in the repository shows fig.2 and fig.3 as input and output fig.4.
-Users can use colormap whatever he/she wants, including the colormap used in input picture.
+The dataset given in the repository shows Fig. 2 and Fig. 3 as input and output Fig. 4.
+Users can use colormap in whatever he/she wants, including the colormap used in the input picture.
 However, in this case, the "seismic" is chosen since I want 0 to be white.
 
 <div align="center">
@@ -75,3 +75,6 @@ However, in this case, the "seismic" is chosen since I want 0 to be white.
 |<b> Fig.4 - Output </b> |
       
 </div>
+
+## Troubleshooting
+Sometimes, you can face to error such that "error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/". Once you install "C++ Desktop development", this error should disappear.
