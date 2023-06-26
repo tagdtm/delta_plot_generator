@@ -78,3 +78,5 @@ However, in this case, the "seismic" is chosen since I want 0 to be white.
 
 ## Troubleshooting
 Sometimes, you can face to error such that "error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/". Once you install "C++ Desktop development", this error should disappear.
+
+You may get an error if you use png. In this case, try to convert them to jpg, then it should work.
